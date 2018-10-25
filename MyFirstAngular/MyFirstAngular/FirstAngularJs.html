@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">    
+    <link href="AppData/App.css" rel="stylesheet" />
+    <script src="AppData/App.js"></script>
+    <title>First Angular</title>
+</head>
+<body>
+    <div id="headerwrapper" ng-controller="headerCtrl">
+        <span class="logo pull-left">{{appDetail.title}}</span>
+        <span class="tagline pull-left">{{appDetail.tagline}}</span>
+        <div class="nav-wrapper pull-left">
+            <ul class="nav nav-pills">
+                <li ng-class="{active: nav.isActive('/Books')}"><a href="#/Books">Books</a></li>
+                <li ng-class="{active: nav:isActive('/kart')}"><a href="#/kart">Kart</a></li>
+            </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div ng-view class="container"></div>
+    </div>    
+</body>
+</html>
